@@ -1,0 +1,22 @@
+:root {
+  --bg-negro: #0b0a0a;
+  --bg-guindo: #4a0d21;
+  --bg-guindo-card: #3b0a1a;
+  --color-dorado: #d4af37;
+  --color-dorado-hover: #b89528;
+  --color-blanco: #ffffff;
+  --color-gris-texto: #aaaaaa;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-negro);
+  color: var(--color-blanco);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}

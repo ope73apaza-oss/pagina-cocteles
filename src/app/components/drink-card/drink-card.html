@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="image-wrapper">
+    <span *ngIf="drink?.badge" class="badge">{{ drink.badge }}</span>
+    <img [src]="drink?.image" [alt]="drink?.name" />
+  </div>
+
+  <div class="card-content">
+    <div class="tags">
+      <span class="tag-alcohol">{{ drink?.tag || (drink?.category === 'coctel' ? 'CON ALCOHOL' : 'SIN ALCOHOL') }}</span>
+      <span class="volume">{{ drink?.volume || '200 ml' }}</span>
+    </div>
+
+    <h4 class="drink-title">{{ drink?.name }}</h4>
+    <p class="drink-description">{{ drink?.description }}</p>
+
+    <div class="price-row">
+      <span class="price">{{ drink?.price?.toFixed(2) }} €</span>
+      <span class="vat">IVA incluido</span>
+    </div>
+
+    <div class="action-buttons">
+      <button class="btn-primary">Añadir al carrito +</button>
+      <button class="btn-secondary">Ver Detalles</button>
+    </div>
+  </div>
+</div>

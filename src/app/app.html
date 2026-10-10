@@ -1,0 +1,76 @@
+<app-header></app-header>
+
+<main class="container">
+  <section class="hero-section">
+    <div class="hero-card hero-text">
+      <span class="subtitle">EL ARTE DE BRINDAR</span>
+      <h1>Tu próximo brindis empieza aquí.</h1>
+      <p>Cocteles de autor y mocteles llenos de carácter. Elige tu favorito y lleva la experiencia del bar a casa.</p>
+      
+      <div class="hero-actions">
+        <button class="btn-primary">Explorar catálogo ↗</button>
+        <button class="btn-secondary">Descubrir mocteles</button>
+      </div>
+      <span class="note">Preparados al momento. Listos para disfrutar.</span>
+    </div>
+
+    <div class="hero-card hero-image">
+      <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=800" alt="Negroni" />
+      <div class="hero-image-overlay">
+        <span>EL FAVORITO DE LA CASA</span>
+        <h3>Negroni clásico <span>12,00 €</span></h3>
+      </div>
+    </div>
+  </section>
+
+  <app-search-bar></app-search-bar>
+
+  <section class="catalog-section" id="cocteles">
+    <div class="section-header">
+      <span class="section-tag">LA SELECCIÓN DEL BAR</span>
+      <h2>Cocteles</h2>
+      <p>Recetas icónicas, ingredientes premium y el equilibrio perfecto.</p>
+    </div>
+
+    <div class="cards-grid">
+      <app-drink-card *ngFor="let drink of cocteles" [drink]="drink"></app-drink-card>
+    </div>
+  </section>
+
+  <section class="catalog-section" id="mocteles">
+    <div class="section-header">
+      <span class="section-tag">TODO EL SABOR, CERO ALCOHOL</span>
+      <h2>Mocteles</h2>
+      <p>Mezclas originales para brindar a tu manera, sin renunciar a nada.</p>
+    </div>
+
+    <div class="cards-grid">
+      <app-drink-card *ngFor="let drink of mocteles" [drink]="drink"></app-drink-card>
+    </div>
+  </section>
+
+  <section class="contact-banner">
+    <div>
+      <h2>Estamos al otro lado del brindis.</h2>
+      <p>¿Dudas sobre tu pedido o una celebración en mente? Hablemos.</p>
+    </div>
+    <button class="btn-whatsapp">Contactar por WhatsApp 💬</button>
+  </section>
+</main>
+
+<footer class="main-footer">
+  <div class="footer-grid">
+    <div>
+      <h3>🍷 Licores App</h3>
+      <p>Buenos ingredientes. Grandes momentos.</p>
+    </div>
+    <div>
+      <h4>Explora</h4>
+      <p>Catálogo | Cocteles | Mocteles</p>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <p>hola&#64;licoresapp.es</p>
+    </div>
+  </div>
+</footer>
